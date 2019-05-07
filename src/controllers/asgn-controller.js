@@ -1,4 +1,4 @@
-var Asgn = require("../src/models/asgn-model");
+var Asgn = require("../models/asgn-model");
 
 exports.AddAsgn = function(req, res) {
     if(!req.body)
