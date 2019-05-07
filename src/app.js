@@ -18,3 +18,14 @@ app.use((req,res,next) => {
     next();
 });
 
+// app.use
+app.use(bodyParser.json());
+app.use(asgnRoute);
+app.use((req,res,next) => {
+    res.status(404).send('Page not found, sorry!');
+});
+
+// list on port
+app.listen(PORT, () => {
+    console.log(`Server has started on port ${PORT}`);
+});
