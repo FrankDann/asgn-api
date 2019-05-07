@@ -7,6 +7,6 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 mongoose.set('useCreateIndex', true);
 mongoose.set('useFindAndModify', false);
-
+mongoose.connect('mongodb://localhost:27017/assignments');
 // Routes
 var asgnRoute = require("./routes/asgn-router");
