@@ -6,7 +6,7 @@ var asgnController = require('../controllers/asgn-controller');
 // POST
 router.post('/assignment', asgnController.AddAsgn);
 // GET singular
-router.get('/assignment/:assignment', asgnController.ShowAsgn);
+router.get('/assignment/:assignmentName', asgnController.ShowAsgn);
 // GET all
 router.get('/assignment', asgnController.ListAsgn);
 // PUT
