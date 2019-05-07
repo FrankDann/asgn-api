@@ -19,7 +19,7 @@ exports.AddAsgn = function(req, res) {
         });
 }
 
-exports.ListAsgn = function(req,res) {
+exports.ShowAsgn = function(req,res) {
     if(!req.body)
     {
         return res.status(400).send("Req body missing");
@@ -29,6 +29,16 @@ exports.ListAsgn = function(req,res) {
     })
         .then((doc) => {
             res.json(doc);
+        })
+        .catch((err) => {
+            res.status(500).json(err);
+        });
+}
+
+exports.ListAsgn = function(req,res) {
+    Asgn.find()
+        .then((doc) => {
+            res.json(doc)
         })
         .catch((err) => {
             res.status(500).json(err);
