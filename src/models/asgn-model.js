@@ -10,4 +10,4 @@ var AsgnSchema = new Schema({
     dueDate: Date
 });
 
-module.exports = mongoose.model('Asgn', AsgnSchema);
+module.exports = mongoose.model('Assignment', AsgnSchema);
