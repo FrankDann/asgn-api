@@ -7,3 +7,6 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 mongoose.set('useCreateIndex', true);
 mongoose.set('useFindAndModify', false);
+
+// Routes
+var asgnRoute = require("./routes/asgn-router");
