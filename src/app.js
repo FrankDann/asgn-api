@@ -19,7 +19,7 @@ app.use((req,res,next) => {
 });
 
 // app.use
-app.use(bodyParser.json());
+app.use(bodyParser.json({type: "application/json"}));
 app.use(asgnRoute);
 app.use((req,res,next) => {
     res.status(404).send('Page not found, sorry!');

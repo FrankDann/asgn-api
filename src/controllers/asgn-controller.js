@@ -1,6 +1,6 @@
 var Asgn = require("../models/asgn-model");
 
-exports.AddAsgn = function(req, res) {
+exports.AddAsgn = function(req,res) {
     if(!req.body)
     {
         return res.status(400).send("Req body missing");
