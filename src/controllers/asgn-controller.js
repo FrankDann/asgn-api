@@ -5,7 +5,7 @@ exports.AddAsgn = function(req,res) {
     {
         return res.status(400).send("Req body missing");
     }
-    var model = new Asgn(req,body);
+    var model = new Asgn(req.body);
     model.save()
         .then((doc) => {
             if(!doc || doc.length === 0)
